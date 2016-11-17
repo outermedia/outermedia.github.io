@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+<div id="result"></div>
+<script type="text/javascript">
+    var params = location.search.substr(1).split("&");
+    var res;
+    var resultDiv;
+    for (var i = 0; i < params.length; i++) {
+        res = params[i].match(/x=([0-9]+)/);
+        if (res) {
+            resultDiv = document.getElementById("result");
+            resultDiv.innerText = parseInt(res[1]) * 2; // double x
+            break;
+        }
+    }
+</script>
+</body>
+</html>
