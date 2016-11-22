@@ -13,7 +13,7 @@
         res = params[i].match(/x=([0-9]+)/);
         if (res) {
             resultDiv = document.getElementById("result");
-            resultDiv.innerText = parseInt(res[1]) * 2; // double x
+            resultDiv.innerHTML = parseInt(res[1]) * 2; // double x
             break;
         }
     }
